@@ -4,7 +4,8 @@
   "description": "Building a Simple CRUD Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/phillipjbeasley/CRUD-app-express-mongo#readme",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
   }
 }
