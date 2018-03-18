@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/phillipjbeasley/CRUD-app-express-mongo#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3"
   },
   "devDependencies": {
