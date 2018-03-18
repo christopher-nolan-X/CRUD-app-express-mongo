@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/phillipjbeasley/CRUD-app-express-mongo/issues"
   },
-  "homepage": "https://github.com/phillipjbeasley/CRUD-app-express-mongo#readme"
+  "homepage": "https://github.com/phillipjbeasley/CRUD-app-express-mongo#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
