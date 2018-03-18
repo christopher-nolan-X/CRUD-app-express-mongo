@@ -1,0 +1,19 @@
+{
+  "name": "crud-app-mongo-express",
+  "version": "1.0.0",
+  "description": "Building a Simple CRUD Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillipjbeasley/CRUD-app-express-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phillipjbeasley/CRUD-app-express-mongo/issues"
+  },
+  "homepage": "https://github.com/phillipjbeasley/CRUD-app-express-mongo#readme"
+}
