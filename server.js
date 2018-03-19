@@ -5,10 +5,12 @@ const app = express();
 
 require('env2')('.env'); // loads all entries into process.env
 
-
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Setting expresses view engine
+app.set('view engine', 'ejs');
 
+// Connecting to the DB
 MongoClient.connect(process.env.DB_URL, (err, client) => {
 	if (err) return console.log(err);
 	db = client.db('quote-machine');
@@ -18,13 +20,17 @@ MongoClient.connect(process.env.DB_URL, (err, client) => {
 })
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/index.html');
+	db.collection('quotes').find().toArray((err, result) => {
+		if (err) return console.log(err);
+		// renders index.ejs
+		res.render('index.ejs', {quotes: result});
+	})
+	// res.sendFile(__dirname + '/index.html');
 	// Note: __dirname is directory that contains the JavaScript source code.
 	// console.log(__dirname);
 })
 
 let db;
-
 
 app.post('/quotes', (req, res) => {
 	db.collection('quotes').save(req.body, (err, result) => {
