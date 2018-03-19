@@ -7,6 +7,7 @@ https://zellwk.com/blog/crud-express-mongodb/
 
 Used https://github.com/dwyl/learn-environment-variables to hide config variables
 
+Used mLab for cloudhosted MongoDB
 
 https://zellwk.com/blog/crud-express-and-mongodb-2/
 
