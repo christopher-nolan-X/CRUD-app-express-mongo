@@ -6,6 +6,8 @@ const app = express();
 require('env2')('.env'); // loads all entries into process.env
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(express.static('public'));
 
 // Setting expresses view engine
 app.set('view engine', 'ejs');
@@ -39,4 +41,8 @@ app.post('/quotes', (req, res) => {
 		console.log('saved to database');
 		res.redirect('/');
 	})
+})
+
+app.put('/quotes', (req, res) => {
+	// Handle put request
 })
